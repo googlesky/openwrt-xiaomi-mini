@@ -36,5 +36,3 @@ jobs:
         with:
           name: nightly-build-${{ steps.date.outputs.date }}
           files: bin/targets/ramips/mt7620/
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
