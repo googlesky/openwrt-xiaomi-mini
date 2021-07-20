@@ -9,7 +9,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     container: 
-      image: openwrtorg/imagebuilder:latest
+      image: openwrtorg/imagebuilder:ramips-mt7620-openwrt-21.02
       options: --user root
     steps:
       - name: Checkout
