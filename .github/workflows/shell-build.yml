@@ -40,8 +40,3 @@ jobs:
           path: |
             /home/build/openwrt/bin/targets/ramips/mt7620/
             
-      - name: GH Release
-        uses: softprops/action-gh-release@v0.1.5
-        with:
-          name: nightly-build-${{ steps.date.outputs.date }}
-          files: bin/targets/ramips/mt7620/
