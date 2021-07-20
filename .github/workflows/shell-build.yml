@@ -1,4 +1,4 @@
-name: CI to Docker hub 
+name: public package
 
 on:
   push:
@@ -35,6 +35,6 @@ jobs:
         uses: softprops/action-gh-release@v0.1.5
         with:
           name: nightly-build-${{ steps.date.outputs.date }}
-          files: bin/targets/ramips/mt7620/*
+          files: bin/targets/ramips/mt7620/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
