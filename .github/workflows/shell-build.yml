@@ -3,6 +3,8 @@ name: public package
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron:  '0 0 * * SAT'
 jobs:
   docker:
     runs-on: ubuntu-latest
