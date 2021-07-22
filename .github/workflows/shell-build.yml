@@ -6,10 +6,10 @@ on:
   schedule:
     - cron:  '0 0 * * SAT'
 jobs:
-  ramipsmt7620openwrt1907:
+  ramipsmt7620:
     runs-on: ubuntu-latest
     container: 
-      image: openwrtorg/imagebuilder:ramips-mt7620-openwrt-19.07
+      image: openwrtorg/imagebuilder:ramips-mt7620
       options: --user root
     steps:
       - name: Checkout
