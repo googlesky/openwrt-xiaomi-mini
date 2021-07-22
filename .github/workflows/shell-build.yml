@@ -40,7 +40,7 @@ jobs:
           path: |
             /home/build/openwrt/bin/targets/ramips/mt7620/
             
-  ramipsmt7620openwrt21.02:
+  ramipsmt7620openwrt2102:
     runs-on: ubuntu-latest
     container: 
       image: openwrtorg/imagebuilder:ramips-mt7620-openwrt-21.02
