@@ -44,7 +44,7 @@ jobs:
   ramipsmt7620openwrt2102:
     runs-on: ubuntu-latest
     container: 
-      image: openwrtorg/imagebuilder:ramips-mt7620-openwrt-21.02
+      image: openwrtorg/imagebuilder:ramips-mt7620-21.02-SNAPSHOT
       options: --user root
     steps:
       - name: Checkout
