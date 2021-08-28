@@ -9,7 +9,7 @@ jobs:
   ramipsmt7620:
     runs-on: ubuntu-latest
     container: 
-      image: openwrtorg/imagebuilder:ramips-mt7620-18.06
+      image: openwrtorg/imagebuilder:ramips-mt7620-19.07
       options: --user root
     steps:
       - name: Checkout
