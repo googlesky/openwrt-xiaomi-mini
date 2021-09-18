@@ -47,7 +47,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest-19.07.8-${{ steps.date.outputs.date }}"
           prerelease: true
-          title: "Stable Build"
+          title: "Stable 19.07.8 Build"
           files: |
             /home/build/openwrt/bin/targets/ramips/mt7620/*.bin
 
@@ -92,7 +92,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest-18.06.7-${{ steps.date.outputs.date }}"
           prerelease: true
-          title: "Stable Build"
+          title: "Stable 18.06.7 Build"
           files: |
             /home/build/openwrt/bin/targets/ramips/mt7620/*.bin
             
