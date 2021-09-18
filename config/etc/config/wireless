@@ -1,0 +1,32 @@
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option hwmode '11a'
+	option path 'pci0000:00/0000:00:00.0/0000:01:00.0'
+	option htmode 'VHT80'
+	option txpower '20'
+	option channel 'auto'
+
+config wifi-device 'radio1'
+	option type 'mac80211'
+	option channel '11'
+	option hwmode '11g'
+	option path 'platform/10180000.wmac'
+	option htmode 'HT20'
+
+config wifi-iface 'wifinet2'
+	option ssid '404NotFound'
+	option encryption 'psk2'
+	option device 'radio0'
+	option mode 'ap'
+	option network 'lan'
+	option key '0975669775'
+
+config wifi-iface 'wifinet1'
+	option ssid '404NotFound_2.4G'
+	option encryption 'psk2'
+	option device 'radio1'
+	option mode 'ap'
+	option network 'lan'
+	option key '0975669775'
+
