@@ -44,7 +44,7 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: "latest-${{ steps.date.outputs.date }}"
           prerelease: true
           title: "Stable Build"
           files: |
@@ -88,8 +88,7 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
+          automatic_release_tag: "master-${{ steps.date.outputs.date }}"
           title: "Master Build"
           files: |
             /home/build/openwrt/bin/targets/ramips/mt7620/*.bin
