@@ -40,6 +40,15 @@ jobs:
           name: ramips-mt7620-openwrt-19.07
           path: |
             /home/build/openwrt/bin/targets/ramips/mt7620/
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Stable Build"
+          files: |
+            /home/build/openwrt/bin/targets/ramips/mt7620/*.bin
             
   ramipsmt7620openwrt2102:
     runs-on: ubuntu-latest
@@ -76,3 +85,11 @@ jobs:
           path: |
             /home/build/openwrt/bin/targets/ramips/mt7620/
             
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Master Build"
+          files: |
+            /home/build/openwrt/bin/targets/ramips/mt7620/*.bin
