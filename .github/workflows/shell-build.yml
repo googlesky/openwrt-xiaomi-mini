@@ -9,6 +9,51 @@ jobs:
   ramipsmt7620:
     runs-on: ubuntu-latest
     container: 
+      image: openwrtorg/imagebuilder:ramips-mt7620-19.07.8
+      options: --user root
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Run shell
+        run: |- 
+          ls -la;
+          pwd
+
+      - name: Run shell
+        run: |- 
+          WORKDIR=`pwd`
+          cd /home/build/openwrt/
+          ls -la;
+          pwd
+          make info
+          make -j12 image \
+          PROFILE="miwifi-mini" \
+          PACKAGES="comgt kmod-usb-serial kmod-usb-serial-option kmod-usb-serial-wwan usb-modeswitch luci-app-mwan3 block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-autofs4 kmod-usb-storage kmod-usb-storage-uas usbutils f2fs-tools kmod-fs-f2fs kmod-usb-ohci kmod-usb-uhci e2fsprogs fdisk kmod-usb-net-rndis kmod-nls-base kmod-usb-core kmod-usb-net kmod-usb-net-cdc-ether kmod-usb2 luci kmod-dummy relayd luci-compat usbreset $WORKDIR/ext-package/luci-theme-argon_2.2.5-20200914_all.ipk " \
+          FILES=config
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: ramips-mt7620-openwrt-19.07
+          path: |
+            /home/build/openwrt/bin/targets/ramips/mt7620/
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest-19.07.8-${{ steps.date.outputs.date }}"
+          prerelease: true
+          title: "Stable Build"
+          files: |
+            /home/build/openwrt/bin/targets/ramips/mt7620/*.bin
+
+  ramipsmt7620-18.06.7:
+    runs-on: ubuntu-latest
+    container: 
       image: openwrtorg/imagebuilder:ramips-mt7620-18.06.7
       options: --user root
     steps:
@@ -38,14 +83,14 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: ramips-mt7620-openwrt-19.07
+          name: ramips-mt7620-openwrt-18.06.7
           path: |
             /home/build/openwrt/bin/targets/ramips/mt7620/
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest-${{ steps.date.outputs.date }}"
+          automatic_release_tag: "latest-18.06.7-${{ steps.date.outputs.date }}"
           prerelease: true
           title: "Stable Build"
           files: |
