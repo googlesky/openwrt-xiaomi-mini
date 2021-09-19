@@ -139,3 +139,7 @@ jobs:
           title: "Master Build"
           files: |
             /home/build/openwrt/bin/targets/ramips/mt7620/*.bin
+
+
+
+
