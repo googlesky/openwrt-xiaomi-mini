@@ -29,7 +29,7 @@ jobs:
           make info
           make -j12 image \
           PROFILE="miwifi-mini" \
-          PACKAGES="comgt kmod-usb-serial kmod-usb-serial-option kmod-usb-serial-wwan usb-modeswitch luci-app-mwan3 block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-autofs4 kmod-usb-storage kmod-usb-storage-uas usbutils f2fs-tools kmod-fs-f2fs kmod-usb-ohci kmod-usb-uhci e2fsprogs fdisk kmod-usb-net-rndis kmod-nls-base kmod-usb-core kmod-usb-net kmod-usb-net-cdc-ether kmod-usb2 luci kmod-dummy relayd luci-compat usbreset $WORKDIR/ext-package/luci-theme-argon_2.2.5-20200914_all.ipk " \
+          PACKAGES="nping httping comgt kmod-usb-serial kmod-usb-serial-option kmod-usb-serial-wwan usb-modeswitch luci-app-mwan3 block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-autofs4 kmod-usb-storage kmod-usb-storage-uas usbutils f2fs-tools kmod-fs-f2fs kmod-usb-ohci kmod-usb-uhci e2fsprogs fdisk kmod-usb-net-rndis kmod-nls-base kmod-usb-core kmod-usb-net kmod-usb-net-cdc-ether kmod-usb2 luci kmod-dummy relayd luci-compat usbreset $WORKDIR/ext-package/luci-theme-argon_2.2.5-20200914_all.ipk " \
           FILES=config
       - name: Get current date
         id: date
@@ -74,7 +74,7 @@ jobs:
           make info
           make -j12 image \
           PROFILE="miwifi-mini" \
-          PACKAGES="comgt kmod-usb-serial kmod-usb-serial-option kmod-usb-serial-wwan usb-modeswitch luci-app-mwan3 block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-autofs4 kmod-usb-storage kmod-usb-storage-uas usbutils f2fs-tools kmod-fs-f2fs kmod-usb-ohci kmod-usb-uhci e2fsprogs fdisk kmod-usb-net-rndis kmod-nls-base kmod-usb-core kmod-usb-net kmod-usb-net-cdc-ether kmod-usb2 luci kmod-dummy relayd luci-compat usbreset $WORKDIR/ext-package/luci-theme-argon_1.7.2-20210309_all.ipk " \
+          PACKAGES="nping httping comgt kmod-usb-serial kmod-usb-serial-option kmod-usb-serial-wwan usb-modeswitch luci-app-mwan3 block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-autofs4 kmod-usb-storage kmod-usb-storage-uas usbutils f2fs-tools kmod-fs-f2fs kmod-usb-ohci kmod-usb-uhci e2fsprogs fdisk kmod-usb-net-rndis kmod-nls-base kmod-usb-core kmod-usb-net kmod-usb-net-cdc-ether kmod-usb2 luci kmod-dummy relayd luci-compat usbreset $WORKDIR/ext-package/luci-theme-argon_1.7.2-20210309_all.ipk " \
           FILES=config
       - name: Get current date
         id: date
@@ -119,7 +119,7 @@ jobs:
           make info
           make -j12 image \
           PROFILE="xiaomi_miwifi-mini" \
-          PACKAGES="comgt kmod-usb-serial kmod-usb-serial-option kmod-usb-serial-wwan usb-modeswitch luci-app-mwan3 block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-autofs4 kmod-usb-storage kmod-usb-storage-uas usbutils f2fs-tools kmod-fs-f2fs kmod-usb-ohci kmod-usb-uhci e2fsprogs fdisk kmod-usb-net-rndis kmod-nls-base kmod-usb-core kmod-usb-net kmod-usb-net-cdc-ether kmod-usb2 luci kmod-dummy relayd luci-compat $WORKDIR/ext-package/luci-theme-argon_2.2.5-20200914_all.ipk " \
+          PACKAGES="nping httping comgt kmod-usb-serial kmod-usb-serial-option kmod-usb-serial-wwan usb-modeswitch luci-app-mwan3 block-mount kmod-fs-ext4 kmod-fs-exfat kmod-fs-autofs4 kmod-usb-storage kmod-usb-storage-uas usbutils f2fs-tools kmod-fs-f2fs kmod-usb-ohci kmod-usb-uhci e2fsprogs fdisk kmod-usb-net-rndis kmod-nls-base kmod-usb-core kmod-usb-net kmod-usb-net-cdc-ether kmod-usb2 luci kmod-dummy relayd luci-compat $WORKDIR/ext-package/luci-theme-argon_2.2.5-20200914_all.ipk " \
           FILES=config
       - name: Get current date
         id: date
