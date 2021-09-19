@@ -51,7 +51,7 @@ jobs:
           files: |
             /home/build/openwrt/bin/targets/ramips/mt7620/*.bin
 
-  ramipsmt7620-18.06.7:
+  ramipsmt7620openwrt18:
     runs-on: ubuntu-latest
     container: 
       image: openwrtorg/imagebuilder:ramips-mt7620-18.06.7
