@@ -1,6 +1,8 @@
 name: public package
 
 on:
+  workflow_dispatch:
+
   push:
     branches: [ main ]
   schedule:
